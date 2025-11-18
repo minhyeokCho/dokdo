@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* layout */
+.sub_tit {padding-top: 15rem; padding-bottom: 4rem; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.sub_tit.sub_bg_01 {background-image: url(../images/bg/bg_sub_01.jpg);}
+.sub_tit .inner {display: flex; align-items: center;}
+
+.sub_tab ul {display: flex;}
+.sub_tab ul li a {padding: .5rem 1rem; display: block; height: 4.7rem; width: 16rem; font-weight: 700; border-left: 1px solid #aaa; position: relative;}  
+.sub_tab ul li a::before {transform: translateY(-1rem); opacity: 0; visibility: hidden; transition: .3s; display: block; content: ''; position: absolute; left: 0.5rem; bottom: calc(100% + 1rem); background: url(../images/common/icon_tab_arr.svg) no-repeat; width: 2.3rem; height: 2rem; background-size: 100% auto;}
+.sub_tab ul li a.active::before,
+.sub_tab ul li a:hover::before {transform: translateY(0); opacity: 1; visibility: visible;}
+
+.sub_btn {margin-left: auto;}
+.sub_btn ul {display: flex; gap: 0.7rem;}
+.sub_btn ul li a {padding: 0.8rem; font-size: 1.5rem; line-height: 1.8rem; height: 100%; color: #fff; font-weight: 700; display: flex; width: 6.9rem; border-radius: .4rem; background-color: #00652e;}
+
+.sub_detail {background-color: #00652e; padding: 6rem 0;}
+.sub_detail h3 {text-align: center; font-size: 3.6rem; color: #fff; font-weight: 700; }
+.sub_detail h4 {margin-top: 1.5rem; text-align: center; font-weight: 300; color: #fff; opacity: 0.5; font-size: 2.4rem;}
+.sub_detail .desc {margin-top: 6rem; font-size: 1.8rem; color: #fff; line-height: 1.6;}
+.sub_detail .desc a {position: relative;}
+.sub_detail .desc a span {color: #f6951c; text-decoration: underline; text-underline-offset: 3px; font-weight: 500; position: relative; padding-right: 1rem; margin-right: 4px;  word-break: keep-all;}
+.sub_detail .desc a span::after {display: block; content: ''; background: url(../images/common/icon_goto.svg) no-repeat 0 0; width: 0.7rem; height: 0.7rem; position: absolute; right: 0; top:3px; background-size: 100% auto;}
+.sub_detail .desc a .tooltip {position: absolute; left: 0; top: 0; width: 420px; font-size: 1.4rem; font-weight: 700; color: #222; border-radius: 4px; background: #fff url(../images/common/arr_list_org.svg) no-repeat left 2.4rem top 3.2rem; background-size: 8px auto; border: 1px solid #aaa; padding: 2.5rem 2rem 2.5rem 5rem;}
+.sub_detail .desc a .tooltip .tooltip_close {background: url(../images/common/icon_close_tool.svg) no-repeat 0 0; background-size: 100% auto; width: 1.2rem; height: 1.2rem; position: absolute; right: .7rem; top: 1rem;}
+.sub_detail ol {display: flex; margin-top: 10rem;}
+.sub_detail ol li {flex:1; height: auto;}
+.sub_detail ol li a {display: block; padding: 0 3rem 2rem; border-left: 3px solid #f6951c; height: 100%;}
+.sub_detail ol li a .tit {display: flex; gap:1.5rem}
+.sub_detail ol li a .tit strong {font-size: 6.4rem; line-height: 1; color: #f6951c; font-weight: 700;}
+.sub_detail ol li a .tit h5 {font-size: 2.4rem; color: #fff; font-weight: 700; word-break: keep-all; padding-bottom: 5px; position: relative;}
+.sub_detail ol li a .tit h5::after {content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background-color:#fff; transition:all 0.3s;}
+.sub_detail ol li a:hover .tit h5::after {width: 100%;}
+.sub_detail ol li a p {margin-top: 2rem; font-size: 1.7rem; opacity: 0.5; color: #fff; font-weight: 300;}
+
+@media only screen and (max-width: 1023px) { /* 테블릿 */
+	.sub_tit {margin-top: 60px; padding: 20px 0;}
+	.sub_tit .inner {flex-direction: column-reverse; align-items: baseline; gap:4rem;}
+}
+@media only screen and (max-width: 767px) { /* 모바일 */
+	.sub_tit {margin-top: 48px;}
+	.sub_tab {width: 100%;}
+	.sub_tab ul li {flex:1;}
+	.sub_tab ul li a {width: 100%;}
+
+}
+
+/* 페이징 */
+
+/* 테이블 */
