@@ -49,7 +49,7 @@ img {display: block;}
 .inner {max-width: 1360px; width: 100%; padding: 0 20px; margin: 0 auto;}
 
 /* header */
-#header {position: fixed; left: 0; top: 0; width: 100%; transition: .3s;}
+#header {position: fixed; left: 0; top: 0; width: 100%; transition: .3s; z-index: 100;}
 #header * {transition: .3s;}
 #header .h_inner {display: flex; align-items: center; justify-content: space-between; padding: 2.5rem 3rem 2.5rem 4rem;}
 #header .h_inner .h_btn span {font-size: 1.4rem; font-weight: 700; color: #333;}
