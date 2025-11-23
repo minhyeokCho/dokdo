@@ -5,10 +5,50 @@ $(document).ready(function(){
 	$('.history_slide').length && historySlide(); //이미지 슬라이드
 	$('.img_slide_type02').length && imgSlideType02(); //이미지 슬라이드
 	$('.img_pop_slide').length && imgPopSlide(); //이미지 슬라이드
+	$('.img_detail_slide').length && imgDetailSlide(); //이미지 슬라이드
+	$('.go_top').length && goTop(); //상단 이동
+	$('.i_ann').length && goAnchor(); //상단 이동
 	$(window).scroll(function() {
 		handleHeaderFix();
 	});
 });
+
+function goAnchor () {
+	$('.t_ann .i_ann').each(function (idx) {
+		$(this).attr('data-target', '#anchor' + (idx + 1));
+	});
+
+	$('.t_ann .i_ann').on('click', function (e) {
+		e.preventDefault();
+
+		const target = $(this).data('target');
+		const $targetEl = $(target);
+
+		if ($targetEl.length) {
+		$('html, body').animate({
+			scrollTop: $targetEl.offset().top - 100
+		}, 400);
+		}
+	});
+}
+
+function goTop() {
+	const $btn = $('.go_top');
+
+	// 스크롤 시 active 토글
+	$(window).on('scroll', function () {
+		if ($(this).scrollTop() > 1) {
+		$btn.addClass('active');
+		} else {
+		$btn.removeClass('active');
+		}
+	});
+
+	// 클릭 시 상단으로 부드럽게 이동
+	$btn.on('click', function () {
+		$('html, body').animate({ scrollTop: 0 }, 300);
+	});
+}
 
 function handleHeaderFix() {
 	const header = $('#header');
@@ -156,10 +196,21 @@ function historySlide() {
 	var swiper = new Swiper(".history_slide", {
 		spaceBetween: 18,
 		slidesPerView : 'auto',
-		loop:true,
 		pagination: {
 			el: ".history_slide .pro",
 			type: 'progressbar'
+		},
+	});
+}
+
+function imgDetailSlide () {
+	var swiper = new Swiper(".img_detail_slide", {
+		spaceBetween: 0,
+		slidesPerView : '1',
+		autoHeight : true,
+		navigation: {
+			nextEl: ".img_list_wrap .btn_slide_next",
+			prevEl: ".img_list_wrap .btn_slide_prev",
 		},
 	});
 }
@@ -198,13 +249,6 @@ function imgPopSlide () {
 			$('body').css('overflow', 'auto'); 
 		});
 	});
-	$('.img_pop').on('click', function(e) {
-		if ($(e.target).is($(this))) {
-			$(this).fadeOut(300, function() {
-				$('body').css('overflow', 'auto');
-			});
-		}
-	});
 }
 
 function imgSlideType02() {
@@ -212,6 +256,7 @@ function imgSlideType02() {
 		spaceBetween: 0,
 		slidesPerView : '1',
 		loop:true,
+		autoHeight : true,
 		navigation: {
 			nextEl: ".img_slide_wrap .btn_slide_next",
 			prevEl: ".img_slide_wrap .btn_slide_prev",
@@ -234,12 +279,9 @@ $(function (){
 		spaceBetween: 0,
 		loop: true,
 		autoHeight: true,
-		//effect : 'fade',
 		navigation: {
 			prevEl: ".swiper_indicator .swiper-button-prev",
 			nextEl: ".swiper_indicator .swiper-button-next"
-			/*nextEl: ".bannerSwiper .swiper-button-next",
-			prevEl: ".bannerSwiper .swiper-button-prev",*/
 		},
 		paginationClickable: true,
 		autoplay: {
@@ -248,8 +290,8 @@ $(function (){
 		},
 		breakpoints: {
 			1199: {
-			  slidesPerView: 2,
-			  spaceBetween: 5,
+				slidesPerView: 2,
+				spaceBetween: 5,
 			},
 		},	
 	});

@@ -56,7 +56,7 @@ img {display: block;}
 #header .h_inner .btn_menu {width: 3.4rem ; padding-bottom: 3.2rem; background: url(../images/common/icon_menu.svg) no-repeat bottom center; background-size: 100% auto;} 
 #header .h_inner h1 {text-align: center;}
 #header .h_inner h1 a strong {font-size: 3.5rem; font-weight: 800; color: #333;}
-#header .h_inner h1 a span {font-size: 1.1rem; color: #333; font-weight: 500; margin-top: 2rem; display: block;}
+#header .h_inner h1 a span {font-size: 1.1rem; color: #333; font-weight: 500; margin-top: 0.5rem; display: block;}
 #header .h_inner .btn_info {width: 8rem ; padding-bottom: 3.5rem; background: url(../images/common/icon_info.svg) no-repeat bottom center; background-size: 2.7rem auto;} 
 
 
@@ -219,7 +219,7 @@ img {display: block;}
 
 
 
-.go_top {position:fixed; right:2rem; bottom:2rem; opacity:0; visibility:hidden; border: 1px solid rgba(133,136,148,0.4); border-radius: 50%; width: 4.3rem; height: 4.3rem; background:#fff url(../images/common/icon_top.svg) no-repeat center; background-size: 1.3rem auto; z-index: 10;}
+.go_top {position:fixed; right:2rem; bottom:2rem; opacity:0; visibility:hidden; width: 4rem; height: 4rem; background:#f27835 url(../images/common/icon_top.svg) no-repeat center; background-size: 1.2rem auto; z-index: 10;}
 .go_top {transition:opacity .2s, visibility .2s;}
 .go_top.active {opacity:1; visibility:visible;}
 

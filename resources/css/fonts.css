@@ -64,44 +64,9 @@
 }
 
 @font-face {
-    font-family: 'GMarketSans';
-    src: url('../fonts/GmarketSansTTFLight.woff2') format('woff2'),
-    url('../fonts/GmarketSansTTFLight.woff') format('woff');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GMarketSans';
-    src: url('../fonts/GmarketSansTTFMedium.woff2') format('woff2'),
-    url('../fonts/GmarketSansTTFMedium.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GMarketSans';
-    src: url('../fonts/GmarketSansTTFBold.woff2') format('woff2'),
-    url('../fonts/GmarketSansTTFBold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'esamanru';
-    src: url('../fonts/esamanruBold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'esamanru';
-    src: url('../fonts/esamanruMedium.woff') format('woff');
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'esamanru';
-    src: url('../fonts/esamanruLight.woff') format('woff');
-    font-weight: 300;
+    font-family: 'NanumMyeongjo';
+    src: url('../fonts/NanumMyeongjoExtraBold.woff2') format('woff2'),
+    url('../fonts/NanumMyeongjoExtraBold.woff') format('woff');
+    font-weight: 800;
     font-display: swap;
 }
