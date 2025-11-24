@@ -7,11 +7,13 @@
 	<title>울릉도·독도 학술조사를 가다</title>
 	<link rel="stylesheet" href="./resources/css/reset.css" />
 	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./resources/css/aos.css" />
 	<link rel="stylesheet" href="./resources/css/common.css" />
 	<link rel="stylesheet" href="./resources/css/sub.css" />
 	<link rel="stylesheet" href="./resources/css/main.css" />
 	<script src="./resources/js/jquery-3.6.0.js"></script>
 	<script src="./resources/js/swiper-bundle.min.js"></script>
+	<script src="./resources/js/aos.js"></script>
 	<script src="./resources/js/common.js"></script>
 </head>
 <body>
@@ -26,16 +28,16 @@
 	<!-- 헤더 영역-->
 	<header id="header">
 		<div class="h_inner">
-			<a href="#" class="h_btn btn_menu">
+			<a href="#" class="h_btn btn_menu" data-aos="fade-up">
 				<span>Menu</span>
 			</a>
-			<h1>
+			<h1 data-aos="fade-up">
 				<a href="#">
 					<strong>울릉도·독도 학술조사를 가다</strong>
 					<span>Going on an Academic Expedition to Ulleungdo and Dokdo</span>
 				</a>
 			</h1>
-			<a href="#" class="h_btn btn_info">
+			<a href="#" class="h_btn btn_info" data-aos="fade-up">
 				<span>Information</span>
 			</a>
 		</div>
@@ -123,7 +125,11 @@
 		<div class="content">
 			<section class="sec_01">
 				<div class="sec_inner">
-					<ul class="quick_menu">
+					<div class="mo_txt" data-aos="fade-up">
+						<h2>울릉도·독도<br/>학술조사를 가다</h2>
+						<p>Going on an Academic Expedition to Ulleungdo and Dokdo</p>
+					</div>
+					<ul class="quick_menu" data-aos="fade-up">
 						<li>
 							<a href="#">
 								<strong>독도 조사를<br/>계획하다</strong>
@@ -150,7 +156,7 @@
 						</li>
 					</ul>
 					<div class="btn_menu">
-						<ul>
+						<ul  data-aos="fade-up">
 							<li><a href="#">독도행각</a></li>
 							<li><a href="#">논고</a></li>
 						</ul>
@@ -167,7 +173,7 @@
 					</div>
 				</a>
 
-				<figure class="img txt_bg">
+				<figure class="img txt_bg" data-aos="fade-up">
 					<img src="./resources/images/main/txt_year.png" alt="1947-1953">
 				</figure>
 
@@ -177,7 +183,7 @@
 			</section>
 			<section class="sec_02">
 				<div class="sec_inner">
-					<figure class="img">
+					<figure class="img" data-aos="fade-up">
 						<img src="./resources/images/bg/bg_main_intro.png">
 					</figure>
 					<a href="#">
@@ -199,28 +205,68 @@
 					</ul>
 				</div>
 				<ul class="slide_cont">
-					<li>
+					<li class="active">
 						<div class="swiper tab_slide">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<figure class="img">
 										<img src="./resources/images/temp/article_01.png" alt="">
 									</figure>
+									<p>제1차 울릉도학술조사대</p>
 								</div>
 								<div class="swiper-slide">
 									<figure class="img">
 										<img src="./resources/images/temp/article_02.png" alt="">
 									</figure>
+									<p>조선산악회 깃발</p>
 								</div>
 								<div class="swiper-slide">
 									<figure class="img">
 										<img src="./resources/images/temp/article_03.png" alt="">
 									</figure>
+									<p>1953년 제3차 학술조사의 독도 측량</p>
 								</div>
 								<div class="swiper-slide">
 									<figure class="img">
 										<img src="./resources/images/temp/article_05.png" alt="">
 									</figure>
+									<p>표석 설치 후 홍종인 한국산악회 회장</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_02.png" alt="">
+									</figure>
+									<p>조선산악회 깃발</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_03.png" alt="">
+									</figure>
+									<p>1953년 제3차 학술조사의 독도 측량</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_05.png" alt="">
+									</figure>
+									<p>표석 설치 후 홍종인 한국산악회 회장</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_02.png" alt="">
+									</figure>
+									<p>조선산악회 깃발</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_03.png" alt="">
+									</figure>
+									<p>1953년 제3차 학술조사의 독도 측량</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_05.png" alt="">
+									</figure>
+									<p>표석 설치 후 홍종인 한국산악회 회장</p>
 								</div>
 							</div>
 						</div>
@@ -236,21 +282,61 @@
 									<figure class="img">
 										<img src="./resources/images/temp/article_01.png" alt="">
 									</figure>
+									<p>제1차 울릉도학술조사대</p>
 								</div>
 								<div class="swiper-slide">
 									<figure class="img">
 										<img src="./resources/images/temp/article_02.png" alt="">
 									</figure>
+									<p>조선산악회 깃발</p>
 								</div>
 								<div class="swiper-slide">
 									<figure class="img">
 										<img src="./resources/images/temp/article_03.png" alt="">
 									</figure>
+									<p>1953년 제3차 학술조사의 독도 측량</p>
 								</div>
 								<div class="swiper-slide">
 									<figure class="img">
 										<img src="./resources/images/temp/article_05.png" alt="">
 									</figure>
+									<p>표석 설치 후 홍종인 한국산악회 회장</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_02.png" alt="">
+									</figure>
+									<p>조선산악회 깃발</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_03.png" alt="">
+									</figure>
+									<p>1953년 제3차 학술조사의 독도 측량</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_05.png" alt="">
+									</figure>
+									<p>표석 설치 후 홍종인 한국산악회 회장</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_02.png" alt="">
+									</figure>
+									<p>조선산악회 깃발</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_03.png" alt="">
+									</figure>
+									<p>1953년 제3차 학술조사의 독도 측량</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="img">
+										<img src="./resources/images/temp/article_05.png" alt="">
+									</figure>
+									<p>표석 설치 후 홍종인 한국산악회 회장</p>
 								</div>
 							</div>
 						</div>
@@ -260,6 +346,9 @@
 						</div>
 					</li>
 				</ul>
+				<figure class="img sec_bg">
+					<img src="./resources/images/bg/bg_main_btm.jpg">
+				</figure>
 			</section>
 		</div>
 	</main>
@@ -418,5 +507,8 @@
 
 	<button class="go_top"><span class="blind">상단으로 이동</span></button>
 </div>
+<script> 
+	AOS.init();
+</script>
 </body>
 </html>

@@ -6,6 +6,7 @@ $(document).ready(function(){
 	$('.img_slide_type02').length && imgSlideType02(); //이미지 슬라이드
 	$('.img_pop_slide').length && imgPopSlide(); //이미지 슬라이드
 	$('.img_detail_slide').length && imgDetailSlide(); //이미지 슬라이드
+	$('.tab_slide').length && tabSlide(); //탭 슬라이드
 	$('.go_top').length && goTop(); //상단 이동
 	$('.i_ann').length && goAnchor(); //상단 이동
 	$(window).scroll(function() {
@@ -69,6 +70,19 @@ function setupMenuToggle() {
 	$('.menu_wrap .menu_close').on('click', function() {
 		$('.menu_wrap').fadeOut();
 		$('body').css('overflow', '')
+	});
+}
+
+function tabSlide() {
+	var swiper = new Swiper(".tab_slide", {
+		spaceBetween: 30,
+		slidesPerView : 'auto',
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".slide_cont .btn_slide_next",
+			prevEl: ".slide_cont .btn_slide_prev",
+		},
 	});
 }
 

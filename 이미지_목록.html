@@ -7,11 +7,13 @@
 	<title>울릉도·독도 학술조사를 가다</title>
 	<link rel="stylesheet" href="./resources/css/reset.css" />
 	<link rel="stylesheet" href="./resources/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./resources/css/aos.css" />
 	<link rel="stylesheet" href="./resources/css/common.css" />
 	<link rel="stylesheet" href="./resources/css/sub.css" />
 	<link rel="stylesheet" href="./resources/css/main.css" />
 	<script src="./resources/js/jquery-3.6.0.js"></script>
 	<script src="./resources/js/swiper-bundle.min.js"></script>
+	<script src="./resources/js/aos.js"></script>
 	<script src="./resources/js/common.js"></script>
 </head>
 <body>
@@ -26,16 +28,16 @@
 	<!-- 헤더 영역-->
 	<header id="header">
 		<div class="h_inner">
-			<a href="#" class="h_btn btn_menu">
+			<a href="#" class="h_btn btn_menu" data-aos="fade-up">
 				<span>Menu</span>
 			</a>
-			<h1>
+			<h1 data-aos="fade-up">
 				<a href="#">
 					<strong>울릉도·독도 학술조사를 가다</strong>
 					<span>Going on an Academic Expedition to Ulleungdo and Dokdo</span>
 				</a>
 			</h1>
-			<a href="#" class="h_btn btn_info">
+			<a href="#" class="h_btn btn_info" data-aos="fade-up">
 				<span>Information</span>
 			</a>
 		</div>
@@ -120,7 +122,7 @@
 
 	<!-- 본문 내용-->
 	<main class="container" id="container">
-		<div class="content img_container">
+		<div class="content bg_container">
 			<div class="sub_tit sub_bg_02">
 				<div class="inner">
 					<div class="sub_tab">
@@ -453,5 +455,8 @@
 
 	<button class="go_top"><span class="blind">상단으로 이동</span></button>
 </div>
+<script> 
+	AOS.init();
+</script>
 </body>
 </html>

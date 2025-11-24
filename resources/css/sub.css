@@ -216,7 +216,7 @@
 .paging_wrap .paging .num.active {background-color: #e1e1e1;}
 
 /* 이미지 목록 */
-.img_container {background-color: #f8f8f8;}
+.bg_container {background-color: #f8f8f8;}
 .img_list_wrap {padding-top: 7rem;}
 .img_list_wrap h3 {font-size: 3.6rem; text-align: center; color: #00652e; font-weight: bold;}
 
@@ -269,6 +269,43 @@
 .tre .sub_detail {background:#00652e url(../images/bg/bg_sub_03.jpg) no-repeat bottom center; background-size: auto 51.1rem ;}
 .tre .article_title_area {padding: 4rem 0;}
 .tre .article_title_area .art_txt {align-items: flex-end;}
+
+/* 연표 */
+.histroy_wrap {position: relative; margin-top: 4rem;}
+.histroy_wrap .type_tit {display: flex; position: absolute; left: 0; top: 5rem; width: 100%;}
+.histroy_wrap .type_tit::after {position: absolute; left: 0; top: 1.6rem; display: block; content: ''; width: 100%; height: 1px; background-color: #cfcfcf;}
+.histroy_wrap .type_tit h3 {width: 50%; font-size: 3rem; font-weight: bold; text-align: center;}
+.histroy_wrap .type_tit h3 span {position: relative; padding-left: 4.2rem; display: inline-block; background-color: #f8f8f8; padding-right: 1rem; z-index: 1;}
+.histroy_wrap .type_tit h3 span::before {display: block; content: ''; width: 3.2rem; height: 3.2rem; border-radius: 50%; position: absolute; left: 0; top: 0;}
+
+
+.histroy {position: relative; z-index: 1; padding-bottom: 8rem;}
+.histroy::before {display: block; content: ''; width: 1px; height: 100%; position: absolute; left: 50%; top: 0; background-color: #cfcfcf;}
+.histroy .group ~ .group {margin-top: 3.5rem;}
+.histroy .group .year {display: flex; align-items: center; justify-content: center; margin: 0 auto; width: 13.4rem; height: 13.4rem; border-radius: 50%; background-color: #444444; font-size: 3.6rem; color: #ffffff; font-weight: 800; z-index: 1; position: relative;}
+.histroy .group ul {}
+.histroy .group ul li {margin-top: 4rem; width: 50%; position: relative; padding: 0 2.5rem;}
+.histroy .group ul li::after {display: block; content: ''; width: 3.2rem; height: 3.2rem; border-radius: 50%; position: absolute; top: 2.4rem;}
+.histroy .group ul li .date {font-size: 2.1rem; color: #444444; font-weight: bold; display: block; padding-bottom: 1.5rem; margin-bottom: 1.5rem; position: relative;}
+.histroy .group ul li .date::after {display: block; content: ''; width: 8.5rem; height: 1px; background-color: #cfcfcf; position: absolute; bottom: 0;}
+.histroy .group ul li p {display: inline-block; color: #222222;font-weight: bold; position: relative; padding-left: 2.5rem; background-position: left top .2rem; background-repeat: no-repeat; background-size: 1.8rem auto; word-break: break-all;}
+
+
+h3.color_yellow {color: #f48216;}
+h3.color_yellow span::before {background-color: #f48216;}
+
+h3.color_green {color: #00652e;}
+h3.color_green span::before {background-color: #00652e;}
+
+li.color_yellow {text-align: right;}
+li.color_yellow::after {right: -1.6rem; background-color: #f48216;}
+li.color_yellow .date::after {right: -2.5rem;}
+li.color_yellow p {background-image: url(../images/common/arr_list_org.svg);}
+
+li.color_green {margin-left: auto;}
+li.color_green::after {left: -1.6rem; background-color: #00652e;}
+li.color_green .date::after {left: -2.5rem;}
+li.color_green p {background-image: url(../images/common/arr_list_gr.svg);}
 
 @media only screen and (min-width: 1921px) {
 	.tre .sub_detail {background-size: cover;}
@@ -335,6 +372,26 @@
 	.img_list_wrap {max-width: calc(100% - 70px);}
 	.img_list_wrap .swiper_ctr {width: calc(100% + 70px);}
 	.img_list_wrap .swiper_ctr button {width: 2.4rem; height: 4.5rem;}
+
+
+
+	.histroy_wrap {margin-top: 4rem;}
+	.histroy_wrap .type_tit {display: block; top: 2rem; left: 100px;}
+	.histroy_wrap .type_tit::after {display: none;}
+	.histroy_wrap .type_tit h3 {width:100%; text-align: left; font-size: 17px;}
+	.histroy_wrap .type_tit h3 ~ h3 {margin-top: 5px;}
+	.histroy_wrap .type_tit h3 span {padding-right: 0; padding-left: 25px;}
+	.histroy_wrap .type_tit h3 span::before {width: 18px; height: 18px;}
+	
+	.histroy {padding-bottom: 4rem;}
+	.histroy .group ul {padding-left: 39px;}
+	.histroy::before {left: 39px;}
+	.histroy .group .year {margin-left: 0; font-size: 21px; width: 78px; height: 78px;}
+	.histroy .group ul li {margin-top: 4rem; width: 100%;}
+
+	li.color_yellow {text-align: left;}
+	li.color_yellow::after {right: initial; left: -1.6rem;}
+	li.color_yellow .date::after {right: initial; left: -2.5rem;}
 }
 @media only screen and (max-width: 500px)  {
 	.tab_li {gap:1rem;} 

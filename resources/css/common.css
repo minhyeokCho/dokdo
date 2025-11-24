@@ -50,7 +50,7 @@ img {display: block;}
 
 /* header */
 #header {position: fixed; left: 0; top: 0; width: 100%; transition: .3s; z-index: 100;}
-#header * {transition: .3s;}
+#header * {transition: .5s;}
 #header .h_inner {display: flex; align-items: center; justify-content: space-between; padding: 2.5rem 3rem 2.5rem 4rem;}
 #header .h_inner .h_btn span {font-size: 1.4rem; font-weight: 700; color: #333;}
 #header .h_inner .btn_menu {width: 3.4rem ; padding-bottom: 3.2rem; background: url(../images/common/icon_menu.svg) no-repeat bottom center; background-size: 100% auto;} 
