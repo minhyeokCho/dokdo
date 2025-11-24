@@ -36,7 +36,6 @@ function goAnchor () {
 function goTop() {
 	const $btn = $('.go_top');
 
-	// 스크롤 시 active 토글
 	$(window).on('scroll', function () {
 		if ($(this).scrollTop() > 1) {
 		$btn.addClass('active');
@@ -45,7 +44,6 @@ function goTop() {
 		}
 	});
 
-	// 클릭 시 상단으로 부드럽게 이동
 	$btn.on('click', function () {
 		$('html, body').animate({ scrollTop: 0 }, 300);
 	});
@@ -74,17 +72,65 @@ function setupMenuToggle() {
 }
 
 function tabSlide() {
-	var swiper = new Swiper(".tab_slide", {
-		spaceBetween: 30,
-		slidesPerView : 'auto',
-		observer: true,
-		observeParents: true,
-		navigation: {
-			nextEl: ".slide_cont .btn_slide_next",
-			prevEl: ".slide_cont .btn_slide_prev",
-		},
+	var tabSwipers = [];
+
+	$('.slide_cont > li').each(function () {
+		var $panel = $(this);
+
+		var swiper = new Swiper($panel.find('.tab_slide')[0], {
+			spaceBetween: 5,
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+			observer: true,
+			observeParents: true,
+			loop: true,
+			navigation: {
+				nextEl: $panel.find('.btn_slide_next')[0],
+				prevEl: $panel.find('.btn_slide_prev')[0]
+			},
+			breakpoints: {
+				768: {
+					spaceBetween: 24,
+					slidesPerView: 3,
+					slidesPerGroup: 3
+				},
+				1025: {
+					spaceBetween: 30,
+					slidesPerView: 4,
+					slidesPerGroup: 4
+				},
+				1280: {
+					slidesPerView: 5,
+					slidesPerGroup: 5
+				},
+				1600: {
+					slidesPerView: 6,
+					slidesPerGroup: 6
+				}
+			}
+		});
+
+		tabSwipers.push(swiper);
+	});
+
+	$('.slide_tab li a').on('click', function (e) {
+		e.preventDefault();
+
+		var idx = $(this).parent().index();
+
+		$('.slide_tab li').removeClass('active')
+			.eq(idx).addClass('active');
+
+		$('.slide_cont > li').removeClass('active')
+			.eq(idx).addClass('active');
+
+		if (tabSwipers[idx]) {
+			tabSwipers[idx].update();
+			tabSwipers[idx].slideToLoop(0);
+		}
 	});
 }
+
 
 function setupTooltips() {
 	const desktopBreakpoint = 768; // 데스크톱/모바일 분기점
@@ -353,7 +399,7 @@ $(function (){
 	})
 
 	//selectbox 텍스트 변환(퍼블용)
-	/* $('.select_wrap .sel_option a').on('click',  function(){
+	/* $('.select_wrap .sel_option a').on('click',	function(){
 		var rel = $(this).text()
 		//console.log(rel);
 		$(this).parents('.select_wrap.sel_ty01').find('.btn_sel').text(rel);
