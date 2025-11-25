@@ -372,9 +372,9 @@ li.color_green p {background-image: url(../images/common/arr_list_gr.svg);}
 	.img_list_wrap .swiper_ctr button {width: 2.4rem; height: 4.5rem;}
 
 	.histroy_wrap {margin-top: 4rem;}
-	.histroy_wrap .type_tit {display: block; top: 2rem; left: 100px;}
+	.histroy_wrap .type_tit {width:calc(100% - 100px);  display: block; top: 2rem; left: 100px;}
 	.histroy_wrap .type_tit::after {display: none;}
-	.histroy_wrap .type_tit h3 {width:100%; text-align: left; font-size: 17px;}
+	.histroy_wrap .type_tit h3 {width: 100%; text-align: left; font-size: 17px;}
 	.histroy_wrap .type_tit h3 ~ h3 {margin-top: 5px;}
 	.histroy_wrap .type_tit h3 span {padding-right: 0; padding-left: 25px;}
 	.histroy_wrap .type_tit h3 span::before {width: 18px; height: 18px;}
