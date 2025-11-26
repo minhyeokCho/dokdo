@@ -28,18 +28,18 @@ time, mark, audio, video, input, textarea, button {margin: 0;padding: 0;border: 
 input:focus {outline:none;}
 
 
-.menu_scroll::-webkit-scrollbar {
-    width: 9px;
-    height: 9px;
+.his_scroll .s_inner::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }
-.menu_scroll::-webkit-scrollbar-track {
-    background: transparent;
+.his_scroll .s_inner::-webkit-scrollbar-track {
+    background: #d8d8d7;
     border-radius: 3px;
 }
-.menu_scroll::-webkit-scrollbar-thumb {
-    background: #dadde4; 
+.his_scroll .s_inner::-webkit-scrollbar-thumb {
+    background: #f48216; 
     border-radius: 3px;
-    border: 2px solid #f0f2f5;
+    border:1px solid #d8d8d7;
 }
 
 

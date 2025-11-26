@@ -2,10 +2,8 @@ $(document).ready(function(){
 	$('#header').length && handleHeaderFix(); //헤더 고정
 	$('.menu_wrap').length && setupMenuToggle(); //전체 메뉴
 	$('.tooltip').length && setupTooltips(); //툴팁
-	$('.history_slide').length && historySlide(); //이미지 슬라이드
 	$('.img_slide_type02').length && imgSlideType02(); //이미지 슬라이드
-	$('.img_pop_slide').length && imgPopSlide(); //이미지 슬라이드
-	$('.img_detail_slide').length && imgDetailSlide(); //이미지 슬라이드
+	$('.img_pop').length && imgPopSlide(); //이미지 슬라이드
 	$('.tab_slide').length && tabSlide(); //탭 슬라이드
 	$('.go_top').length && goTop(); //상단 이동
 	$('.i_ann').length && goAnchor(); //상단 이동
@@ -252,52 +250,13 @@ function setupTooltips() {
 	});
 }
 
-function historySlide() {
-	var swiper = new Swiper(".history_slide", {
-		spaceBetween: 18,
-		slidesPerView : 'auto',
-		pagination: {
-			el: ".history_slide .pro",
-			type: 'progressbar'
-		},
-	});
-}
-
-function imgDetailSlide () {
-	var swiper = new Swiper(".img_detail_slide", {
-		spaceBetween: 0,
-		slidesPerView : '1',
-		autoHeight : true,
-		navigation: {
-			nextEl: ".img_list_wrap .btn_slide_next",
-			prevEl: ".img_list_wrap .btn_slide_prev",
-		},
-	});
-}
-
 function imgPopSlide () {
-	let imgPopSwiper;
-
 	$('.js_img_pop').on('click', function(e) {
 		e.preventDefault();
 
 		const $imgPop = $('.img_pop');
 
 		$imgPop.fadeIn(300, function() {
-			if (!imgPopSwiper) {
-				imgPopSwiper = new Swiper(".img_pop_slide", {
-					spaceBetween: 0,
-					slidesPerView : '1',
-					observer: true,
-					observeParents: true,
-					navigation: {
-						nextEl: ".img_pop .btn_slide_next",
-						prevEl: ".img_pop .btn_slide_prev",
-					},
-				});
-			} else {
-				imgPopSwiper.update();
-			}
 			$('body').css('overflow', 'hidden'); 
 		});
 	});
